@@ -17,8 +17,18 @@ import org.ajoberstar.grgit.Grgit
 
 buildscript {
   repositories {
-    mavenCentral()
-    jcenter()
+    mavenCentral()  // 使用 Maven Central 仓库
+    maven { url 'https://maven.aliyun.com/repository/public' }  // 阿里云仓库（国内推荐）
+    maven {
+      url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+      url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'
+    }
+    // 插件下载地址
+    maven {
+      url 'https://maven.aliyun.com/repository/gradle-plugin'
+    }
   }
   apply from: file('gradle/buildscript.gradle'), to: buildscript
 
@@ -36,7 +46,18 @@ allprojects {
   apply plugin: "jacoco"
 
   repositories {
-    mavenCentral()
+    mavenCentral()  // 使用 Maven Central 仓库
+    maven { url 'https://maven.aliyun.com/repository/public' }  // 阿里云仓库（国内推荐）
+    maven {
+      url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+      url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'
+    }
+    // 插件下载地址
+    maven {
+      url 'https://maven.aliyun.com/repository/gradle-plugin'
+    }
   }
 
   apply plugin: 'com.github.ben-manes.versions'

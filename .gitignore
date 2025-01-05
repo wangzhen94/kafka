@@ -27,6 +27,8 @@ kafka.iws
 .vagrant
 Vagrantfile.local
 /logs
+./logs
+./kafka-logs
 .DS_Store
 
 config/server-*
