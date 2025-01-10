@@ -280,7 +280,7 @@ class KafkaServer(val config: KafkaConfig, time: Time = SystemTime, threadNamePr
         startupComplete.set(true)
         isStartingUp.set(false)
         AppInfoParser.registerAppInfo(jmxPrefix, config.brokerId.toString)
-        info("started")
+        info("wangzhen started")
       }
     }
     catch {
